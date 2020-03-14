@@ -1,0 +1,14 @@
+<repo>
+	<footerlinks>
+		<link>
+			<name>Follow me on Twitter / Suis- Moi sur Twitter</name>
+			<url>https://twitter.com/turitoto1</url>
+			<iconclass>fa fa-twitter</iconclass>
+		</link>
+		<link>
+			<name> My Website / Mon Site Web </name>
+			<url>https://salva59s.webnode.be</url>
+			<iconclass>fa fa-thumbs-up</iconclass>
+		</link>
+	</footerlinks>
+</repo>
