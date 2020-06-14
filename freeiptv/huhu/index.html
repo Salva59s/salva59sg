@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><title>WATCHED Addon Server</title></head><body><tt><h1>WATCHED Addon Server</h1><ul><li><h2><a class="addon-huhu-resolver">Huhu Resolver</a></h2><p>Version: 0.0.5</p></li><li><h2><a class="addon-hot-series-de">Deutsche Serien</a></h2><p>Version: 0.1.2</p></li><li><h2><a class="addon-hot-movies-de">Deutsche Filme</a></h2><p>Version: 0.0.1</p></li><li><h2><a class="addon-diziay.me">diziay.me</a></h2><p>Version: 0.0.3</p></li><li><h2><a class="addon-filmstoon">Films Française</a></h2><p>Version: 0.0.1</p></li><li><h2><a class="addon-french--stream">Films Française 2</a></h2><p>Version: 0.0.0</p></li><li><h2><a class="addon-english-hd-1">English Everything</a></h2><p>Version: 0.0.1</p></li><li><h2><a class="addon-english-hd-2">English Movies</a></h2><p>Version: 0.0.1</p></li><li><h2><a class="addon-hot">Hot!</a></h2><p>Version: 0.0.2</p></li><li><h2><a class="addon-kinox">Deutsche Medien</a></h2><p>Version: 0.0.2</p></li><li><h2><a class="addon-hot-movies-de-2">Deutsche Filme 2</a></h2><p>Version: 0.0.2</p></li><li><h2><a class="addon-hot-series-de-2">Mehr Serien</a></h2><p>Version: 0.0.1</p></li><li><h2><a class="addon-english-hd-3">English Movies and Series</a></h2><p>Version: 0.0.1</p></li><li><h2><a class="addon-seriestream-fr">Série Française</a></h2><p>Version: 0.0.2</p></li><li><h2><a class="addon-all-french">Française</a></h2><p>Version: 0.0.0</p></li><li><h2><a class="addon-english-hd-4">English 4</a></h2><p>Version: 0.0.0</p></li><li><h2><a class="addon-huhu-tv">HUHU.TO</a></h2><p>Version: 0.0.4</p></li><li><h2><a class="addon-huhu-tv-resolver">Huhu TV Resolver</a></h2><p>Version: 0.0.0</p></li><li><h2><a class="addon-huhu-bundle-de">HUHU.TO</a></h2><p>Version: 0.2.11</p></li><li><h2><a class="addon-huhu-repo">HUHU.TO Addons</a></h2><p>Version: 0.1.2</p></li></ul></tt><script type="text/javascript">/**
+*
+*  Base64 encode / decode
+*  http://www.webtoolkit.info/
+*
+**/
+var Base64 = {
+  // private property
+  _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+  // public method for encoding
+  encode: function(input) {
+    var output = "";
+    var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+    var i = 0;
+    input = Base64._utf8_encode(input);
+    while (i < input.length) {
+      chr1 = input.charCodeAt(i++);
+      chr2 = input.charCodeAt(i++);
+      chr3 = input.charCodeAt(i++);
+      enc1 = chr1 >> 2;
+      enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+      enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+      enc4 = chr3 & 63;
+      if (isNaN(chr2)) {
+        enc3 = enc4 = 64;
+      } else if (isNaN(chr3)) {
+        enc4 = 64;
+      }
+      output =
+        output +
+        this._keyStr.charAt(enc1) +
+        this._keyStr.charAt(enc2) +
+        this._keyStr.charAt(enc3) +
+        this._keyStr.charAt(enc4);
+    }
+    return output;
+  },
+  // private method for UTF-8 encoding
+  _utf8_encode: function(string) {
+    string = string.replace(/\r\n/g, "\n");
+    var utftext = "";
+    for (var n = 0; n < string.length; n++) {
+      var c = string.charCodeAt(n);
+      if (c < 128) {
+        utftext += String.fromCharCode(c);
+      } else if (c > 127 && c < 2048) {
+        utftext += String.fromCharCode((c >> 6) | 192);
+        utftext += String.fromCharCode((c & 63) | 128);
+      } else {
+        utftext += String.fromCharCode((c >> 12) | 224);
+        utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+        utftext += String.fromCharCode((c & 63) | 128);
+      }
+    }
+    return utftext;
+  },
+};</script><script type="text/javascript">var singleMode = false;
+[{"type":"worker","name":"Huhu Resolver","id":"huhu-resolver"},{"type":"worker","name":"Deutsche Serien","id":"hot-series-de"},{"type":"worker","name":"Deutsche Filme","id":"hot-movies-de"},{"type":"worker","name":"diziay.me","id":"diziay.me"},{"type":"worker","name":"Films Française","id":"filmstoon"},{"type":"worker","name":"Films Française 2","id":"french--stream"},{"type":"worker","name":"English Everything","id":"english-hd-1"},{"type":"worker","name":"English Movies","id":"english-hd-2"},{"type":"worker","name":"Hot!","id":"hot"},{"type":"worker","name":"Deutsche Medien","id":"kinox"},{"type":"worker","name":"Deutsche Filme 2","id":"hot-movies-de-2"},{"type":"worker","name":"Mehr Serien","id":"hot-series-de-2"},{"type":"worker","name":"English Movies and Series","id":"english-hd-3"},{"type":"worker","name":"Série Française","id":"seriestream-fr"},{"type":"worker","name":"Française","id":"all-french"},{"type":"worker","name":"English 4","id":"english-hd-4"},{"type":"iptv","name":"HUHU.TO","id":"huhu-tv"},{"type":"worker","name":"Huhu TV Resolver","id":"huhu-tv-resolver"},{"type":"bundle","name":"HUHU.TO","id":"huhu-bundle-de"},{"type":"repository","name":"HUHU.TO Addons","id":"huhu-repo"}].forEach(function(a) {
+  var url = String(window.location).replace(/\/$/, '') + '/' + (singleMode ? '' : a.id);
+  var d = JSON.stringify({
+    kind: 'addon',
+    type: a.type,
+    name: a.name,
+    url: url
+  });
+  var e = document.getElementsByClassName('addon-'+a.id);
+  for (var i = 0; i < e.length; i++) {
+    var b = Base64.encode(d);
+    // b = b.replace(/\//g, '_').replace(/\+/g, '-').replace(/[=]+$/g, '');
+    e[i].setAttribute('href', 'https://www.watched.com/share#' + b);
+  }
+});</script></body></html>
