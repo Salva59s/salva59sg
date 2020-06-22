@@ -1,0 +1,114 @@
+
+.stacks_left {
+	float:left;
+}
+
+.stacks_row {
+	overflow:hidden;
+	margin:0 auto;
+}
+#stacks_in_15_page0 .stacks_left {
+	width:200px;
+}
+
+#stacks_in_15_page0 .stacks_row {
+	width:400px;
+}
+#stacks_in_28_page0 {
+	border: solid rgba(255, 255, 255, 1.00);
+	border-width:  10px;
+}
+#stacks_in_24_page0_button {
+	display:block;
+	position: relative;
+	text-align: center;
+}
+
+
+#stacks_in_24_page0 a:link, #stacks_in_24_page0 a:visited {
+	 display:inline-block; 
+	
+	
+	position: relative;
+	text-decoration:none;
+}
+#stacks_in_24_page0 a:hover, #stacks_in_24_page0 a:active {
+	color:#FFFFFF;
+}
+
+
+
+
+
+
+
+#stacks_in_24_page0 a:link, #stacks_in_24_page0 a:visited {
+	background-color:#BF7F3F;
+	background: -webkit-gradient(linear, left top, left bottom, from(#BF7F3F), to(#724C26));
+	border:1px solid #724C26;
+	padding:3px 20px;
+	border-radius:30px;
+	color:#FFFFFF;
+	box-shadow:rgba(0, 0, 0, 0.5) 0px 1px 2px;
+	margin:5px;
+	font-weight:bold;
+}
+#stacks_in_24_page0 a:hover {
+	background-color:#CE8944;
+	background: -webkit-gradient(linear, left top, left bottom, from(#CE8944), to(#634221));
+	box-shadow:rgba(0, 0, 0, 0.25) 0px 2px 4px;
+}
+#stacks_in_24_page0 a:active {
+	background-color:#BF7F3F;
+	box-shadow:rgba(0, 0, 0, 0.75) 0px 0px 4px inset;
+}
+
+
+
+#stacks_in_26_page0_button {
+	display:block;
+	position: relative;
+	text-align: center;
+}
+
+
+#stacks_in_26_page0 a:link, #stacks_in_26_page0 a:visited {
+	 display:inline-block; 
+	
+	
+	position: relative;
+	text-decoration:none;
+}
+#stacks_in_26_page0 a:hover, #stacks_in_26_page0 a:active {
+	color:#FFFFFF;
+}
+
+
+
+
+
+
+
+#stacks_in_26_page0 a:link, #stacks_in_26_page0 a:visited {
+	background-color:#00A0FF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00A0FF), to(#0060BF));
+	border:1px solid #0060BF;
+	padding:3px 20px;
+	border-radius:30px;
+	color:#FFFFFF;
+	box-shadow:rgba(0, 0, 0, 0.5) 0px 1px 2px;
+	margin:5px;
+	font-weight:bold;
+}
+#stacks_in_26_page0 a:hover {
+	background-color:#00ACFF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00ACFF), to(#0053A5));
+	box-shadow:rgba(0, 0, 0, 0.25) 0px 2px 4px;
+}
+#stacks_in_26_page0 a:active {
+	background-color:#00A0FF;
+	box-shadow:rgba(0, 0, 0, 0.75) 0px 0px 4px inset;
+}
+
+
+
